@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -7,16 +7,101 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #e5e6e6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 14px;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.o-flex {
+  display: flex;
+}
+
+.upper-form {
+  padding: 20px;
+  display: flex;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 998px;
+}
+
+.upper-form-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.upper-form-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-heading {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-input {
+  width: 400px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.date-input {
+  width: 160px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.lower-form {
+  padding: 10px;
+  background-color: white;
+  width: 1018px;
+  margin-bottom: 20px;
+}
+
+.lower-form-header {
+  display: flex;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+
+.product-row {
+  display: flex;
+  padding: 10px;
+}
+
+.delete-btn {
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  background-color: red;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.action-btn {
+  height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  color: white;
+  background-color: #5284ee;
+  border-radius: 2px;
 }
