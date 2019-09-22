@@ -22,6 +22,15 @@ export const SHIPPING_COUNTRY = `${SHIPPING_PREFIX}country`;
 export const SHIPPING_ORDER_DATE = `${SHIPPING_PREFIX}order_date`;
 
 
+const PRODUCT_PREFIX = '@@product/';
+export const PRODUCT_ID = `${PRODUCT_PREFIX}id`;
+export const PRODUCT_NAME = `${PRODUCT_PREFIX}name`;
+export const PRODUCT_QUANTITY = `${PRODUCT_PREFIX}quantity`;
+export const PRODCUT_UNIT_PRICE = `${PRODUCT_PREFIX}unit_price`;
+export const PRODUCT_TOTAL_PRICE = `${PRODUCT_PREFIX}total_price`;
+export const PRODUCT_NOTES = `${PRODUCT_PREFIX}notes`;
+
+
 export const inputChangeType = {
   ON_BLUR: 'ON BLUR',
   ON_CHANGE: 'ON CHANGE'

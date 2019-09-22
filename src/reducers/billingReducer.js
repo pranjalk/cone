@@ -89,7 +89,6 @@ const billingReducer = (state = initialState, action) => {
       }
     }
   }
-
 };
 
 export default billingReducer;
