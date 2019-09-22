@@ -3,9 +3,10 @@ import './App.css';
 import BillingAddress from './BillingAddress';
 import ShippingAddress from './ShippingAddress';
 import ProductForm from './ProductForm';
+import MainConnect from './connectwrappers/MainConnect';
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <div className='App-header'>
@@ -17,7 +18,11 @@ function App() {
           <ProductForm/>
         </div>
         <div className='o-flex' style={{ padding: '10px', justifyContent: 'flex-end' }}>
-          <div className='action-btn' style={{ float: 'right' }} >
+          <div
+            className='action-btn'
+            style={{ float: 'right' }}
+            onClick={props.consoleLogWholeData}
+          >
             SAVE
           </div>
         </div>
@@ -26,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainConnect(App);

@@ -1,4 +1,4 @@
-const BILLING_PREFIX = '@@billing/';
+export const BILLING_PREFIX = '@@billing/';
 
 export const BILLING_FIRST_NAME = `${BILLING_PREFIX}first_name`;
 export const BILLING_LAST_NAME = `${BILLING_PREFIX}last_name`;
@@ -10,7 +10,7 @@ export const BILLING_ZIPCODE = `${BILLING_PREFIX}zipcode`;
 export const BILLING_COUNTRY = `${BILLING_PREFIX}country`;
 export const BILLING_ORDER_DATE = `${BILLING_PREFIX}order_date`;
 
-const SHIPPING_PREFIX = '@@shipping/';
+export const SHIPPING_PREFIX = '@@shipping/';
 export const SHIPPING_FIRST_NAME = `${SHIPPING_PREFIX}first_name`;
 export const SHIPPING_LAST_NAME = `${SHIPPING_PREFIX}last_name`;
 export const SHIPPING_ADDRESS_LINE_1 = `${SHIPPING_PREFIX}address_line_1`;
@@ -22,7 +22,7 @@ export const SHIPPING_COUNTRY = `${SHIPPING_PREFIX}country`;
 export const SHIPPING_ORDER_DATE = `${SHIPPING_PREFIX}order_date`;
 
 
-const PRODUCT_PREFIX = '@@product/';
+export const PRODUCT_PREFIX = '@@product/';
 export const PRODUCT_ID = `${PRODUCT_PREFIX}id`;
 export const PRODUCT_NAME = `${PRODUCT_PREFIX}name`;
 export const PRODUCT_QUANTITY = `${PRODUCT_PREFIX}quantity`;

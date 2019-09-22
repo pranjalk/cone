@@ -58,6 +58,14 @@
   padding: 5px;
 }
 
+.error {
+  border: 1px solid red;
+}
+
+.custom-input.error {
+  border: 1px solid red;
+}
+
 .date-input {
   width: 160px;
   height: 15px;
@@ -65,6 +73,10 @@
   font-size: 12px;
   margin-bottom: 10px;
   padding: 5px;
+}
+
+.date-input.error {
+  border: 1px solid red;
 }
 
 .lower-form {

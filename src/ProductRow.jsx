@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
+import cx from 'classnames';
 import {
   PRODUCT_ID,
   PRODUCT_NAME,
   PRODUCT_QUANTITY,
   PRODCUT_UNIT_PRICE,
-  PRODUCT_TOTAL_PRICE,
   PRODUCT_NOTES,
 } from './constants.js'
 
 export default class ProductRow extends Component {
   render() {
-    const totalPrice = this.props.rowData[PRODCUT_UNIT_PRICE].value * this.props.rowData[PRODUCT_QUANTITY].value;
+    const { rowData, rowDataId } = this.props;
+    const totalPrice = rowData[PRODCUT_UNIT_PRICE].value * rowData[PRODUCT_QUANTITY].value;
     return (
       <div className='product-row'>
         <input
@@ -18,14 +19,15 @@ export default class ProductRow extends Component {
             width: '113px',
             marginRight: '10px'
           }}
+          className={cx({ error: rowData[PRODUCT_ID].error && rowData[PRODUCT_ID].hasBlurred })}
           type='number'
-          value={this.props.rowData[PRODUCT_ID].value}
+          value={rowData[PRODUCT_ID].value}
           onBlur={this.props.onBlurProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_ID
           })}
           onChange={this.props.onChangeProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_ID
           })}
         />
@@ -34,13 +36,14 @@ export default class ProductRow extends Component {
             width: '185px',
             marginRight: '10px'
           }}
-          value={this.props.rowData[PRODUCT_NAME].value}
+          className={cx({ error: rowData[PRODUCT_NAME].error && rowData[PRODUCT_NAME].hasBlurred })}
+          value={rowData[PRODUCT_NAME].value}
           onBlur={this.props.onBlurProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_NAME
           })}
           onChange={this.props.onChangeProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_NAME
           })}
         />
@@ -49,14 +52,15 @@ export default class ProductRow extends Component {
             width: '110px',
             marginRight: '10px'
           }}
+          className={cx({ error: rowData[PRODUCT_QUANTITY].error && rowData[PRODUCT_QUANTITY].hasBlurred })}
           type='number'
-          value={this.props.rowData[PRODUCT_QUANTITY].value}
+          value={rowData[PRODUCT_QUANTITY].value}
           onBlur={this.props.onBlurProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_QUANTITY
           })}
           onChange={this.props.onChangeProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_QUANTITY
           })}
         />
@@ -66,13 +70,14 @@ export default class ProductRow extends Component {
             marginRight: '10px'
           }}
           type='number'
-          value={this.props.rowData[PRODCUT_UNIT_PRICE].value}
+          className={cx({ error: rowData[PRODCUT_UNIT_PRICE].error && rowData[PRODCUT_UNIT_PRICE].hasBlurred })}
+          value={rowData[PRODCUT_UNIT_PRICE].value}
           onBlur={this.props.onBlurProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODCUT_UNIT_PRICE
           })}
           onChange={this.props.onChangeProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODCUT_UNIT_PRICE
           })}
         />
@@ -90,13 +95,14 @@ export default class ProductRow extends Component {
             width: '110px',
             marginRight: '10px'
           }}
-          value={this.props.rowData[PRODUCT_NOTES].value}
+          className={cx({ error: rowData[PRODUCT_NOTES].error && rowData[PRODUCT_NOTES].hasBlurred })}
+          value={rowData[PRODUCT_NOTES].value}
           onBlur={this.props.onBlurProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_NOTES
           })}
           onChange={this.props.onChangeProductRowElement({
-            rowId: this.props.rowDataId,
+            rowId: rowDataId,
             elem: PRODUCT_NOTES
           })}
         />
@@ -105,7 +111,7 @@ export default class ProductRow extends Component {
           style={{ width: '80px', padding: '5px 10px' }}
           onClick={() => {
             this.props.deleteProductRow({
-              keyToDelete: this.props.rowDataId
+              keyToDelete: rowDataId
             });
           }}
         >
