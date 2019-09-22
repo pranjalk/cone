@@ -10,6 +10,7 @@ import {
 
 export default class ProductRow extends Component {
   render() {
+    const totalPrice = this.props.rowData[PRODCUT_UNIT_PRICE].value * this.props.rowData[PRODUCT_QUANTITY].value;
     return (
       <div className='product-row'>
         <input
@@ -17,6 +18,7 @@ export default class ProductRow extends Component {
             width: '113px',
             marginRight: '10px'
           }}
+          type='number'
           value={this.props.rowData[PRODUCT_ID].value}
           onBlur={this.props.onBlurProductRowElement({
             rowId: this.props.rowDataId,
@@ -47,6 +49,7 @@ export default class ProductRow extends Component {
             width: '110px',
             marginRight: '10px'
           }}
+          type='number'
           value={this.props.rowData[PRODUCT_QUANTITY].value}
           onBlur={this.props.onBlurProductRowElement({
             rowId: this.props.rowDataId,
@@ -62,6 +65,7 @@ export default class ProductRow extends Component {
             width: '110px',
             marginRight: '10px'
           }}
+          type='number'
           value={this.props.rowData[PRODCUT_UNIT_PRICE].value}
           onBlur={this.props.onBlurProductRowElement({
             rowId: this.props.rowDataId,
@@ -77,15 +81,9 @@ export default class ProductRow extends Component {
             width: '110px',
             marginRight: '10px'
           }}
-          value={this.props.rowData[PRODUCT_TOTAL_PRICE].value}
-          onBlur={this.props.onBlurProductRowElement({
-            rowId: this.props.rowDataId,
-            elem: PRODUCT_TOTAL_PRICE
-          })}
-          onChange={this.props.onChangeProductRowElement({
-            rowId: this.props.rowDataId,
-            elem: PRODUCT_TOTAL_PRICE
-          })}
+          type='number'
+          disabled
+          value={totalPrice.toFixed(2)}
         />
         <input
           style={{

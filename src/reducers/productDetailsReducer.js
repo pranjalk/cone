@@ -3,7 +3,6 @@ import {
   PRODUCT_NAME,
   PRODUCT_QUANTITY,
   PRODCUT_UNIT_PRICE,
-  PRODUCT_TOTAL_PRICE,
   PRODUCT_NOTES,
 } from '../constants.js'
 
@@ -27,19 +26,13 @@ const productRowInitialState = {
     error: true,
   },
   [PRODUCT_QUANTITY]: {
-    value: '',
+    value: 0,
     hasChanged: false,
     hasBlurred: false,
     error: true,
   },
   [PRODCUT_UNIT_PRICE]: {
-    value: '',
-    hasChanged: false,
-    hasBlurred: false,
-    error: true,
-  },
-  [PRODUCT_TOTAL_PRICE]: {
-    value: '',
+    value: 0,
     hasChanged: false,
     hasBlurred: false,
     error: true,
