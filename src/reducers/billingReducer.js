@@ -10,7 +10,7 @@ import {
   BILLING_ORDER_DATE
 } from '../constants.js';
 
-import { SET_ORDER_FORM_FIELD } from '../actions/index.js';
+import { SET_BILLING_ORDER_FORM_FIELD } from '../actions/index.js';
 
 const initialState = {
   [BILLING_FIRST_NAME]: {
@@ -71,7 +71,7 @@ const initialState = {
 
 const billingReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_ORDER_FORM_FIELD: {
+    case SET_BILLING_ORDER_FORM_FIELD: {
       const newField = {
         value: action.value,
         error: action.error,

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { inputChangeType } from '../constants.js'
-import { setOrderFormElement } from '../actions/index.js';
+import { setShippingOrderFormElement } from '../actions/index.js';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,14 +11,14 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     onBlurOrderFormElement: (payload) => {
-      dispatch(setOrderFormElement({
+      dispatch(setShippingOrderFormElement({
         element: payload.target.id,
         value: payload.target.value,
         changeType: inputChangeType.ON_BLUR
       }));
     },
     onChangeOrderFormElement: (payload) => {
-      dispatch(setOrderFormElement({
+      dispatch(setShippingOrderFormElement({
         element: payload.target.id,
         value: payload.target.value,
         changeType: inputChangeType.ON_CHANGE
